@@ -1,23 +1,27 @@
 # sleepy-for-yunzai
-ÈÃ [Yunzai-Bot](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index) ´Ó [sleepy](https://github.com/wyf9/sleepy) ·şÎñ¶Ë»ñÈ¡Éè±¸×´Ì¬²¢·¢ËÍÏûÏ¢¡£
-# Ğ§¹ûÔ¤ÀÀ
-![Ğ§¹ûÔ¤ÀÀ](https://gitee.com/WindDrift/sleepy-for-yunzai/raw/master/preview.png)
-# Ê¹ÓÃ·½·¨
-## °²×°ÒÀÀµ
-ĞèÒª `axios` ÒÀÀµ£¬ÇëÔÚ Yunzai-Bot ¸ùÄ¿Â¼Ê¹ÓÃÒÔÏÂÃüÁî°²×°£º
+è®© [Yunzai-Bot](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index) ä» [sleepy](https://github.com/wyf9/sleepy) æœåŠ¡ç«¯è·å–è®¾å¤‡çŠ¶æ€å¹¶å‘é€æ¶ˆæ¯ã€‚
+# æ•ˆæœé¢„è§ˆ
+![æ•ˆæœé¢„è§ˆ](https://gitee.com/WindDrift/sleepy-for-yunzai/raw/master/preview.png)
+# ä½¿ç”¨æ–¹æ³•
+## å®‰è£…ä¾èµ–
+éœ€è¦ `axios` ä¾èµ–ï¼Œè¯·åœ¨ Yunzai-Bot æ ¹ç›®å½•ä½¿ç”¨ä»¥ä¸‹å‘½ä»¤å®‰è£…ï¼š
 ```
 pnpm i
 pnpm add axios -w
 ```
-## °²×°
-´Ó²Ö¿âÏÂÔØ `sleepy-for-yunzai.js` ÎÄ¼ş£¬²¢·ÅÈë Yunzai-Bot µÄ `plugins`-`example` ÎÄ¼ş¼ĞÖĞ£¬È»ºó´ò¿ª¸ÃÎÄ¼ş£¬½«µÚ 21 ĞĞµÄ `YourServerAdderss` Ìæ»»ÎªÄãµÄ sleepy ·şÎñ¶ËµØÖ·£¬ÖØÆô Yunzai-Bot ¼´¿ÉÊ¹ÓÃ¡£
-## Ê¹ÓÃ
-ÔÚÈºÄÚ·¢ËÍ `ÈËÄØ` ²é¿´Éè±¸×´Ì¬¡£
-ÈôĞèÒªĞŞ¸Ä¹Ø¼ü´Ê£¬ÇëĞŞ¸Ä `sleepy-for-yunzai.js` ÎÄ¼şµÚ 11 ĞĞµÄÕıÔò±í´ïÊ½£¬È»ºóÖØÆô Yunzai-Bot¡£
-## ½ø½×
-ÔÄ¶Á [sleepy API ÎÄµµ](https://github.com/wyf9/sleepy/blob/main/doc/api.md)£¬¼ÓÈë¸ü¶à¹¦ÄÜ¡£
-»¶Ó­¸÷Î»´óÀĞÌá½» [Issue](https://gitee.com/WindDrift/sleepy-for-yunzai/issues) Óë [Pull Request](https://gitee.com/WindDrift/sleepy-for-yunzai/pulls) ²¹³ä´úÂë¡£
-# ÆäËû¼°ÃùĞ»
-±¾²å¼ş½ö¹©Ñ§Ï°½»Á÷Ê¹ÓÃ£¬²»µÃÓÃÓÚÉÌÒµÓÃÍ¾¡£
-±¾²å¼ş´Ó [Lain./Miao-Yunzai-plugin](https://gitee.com/shijinn/Miao-Yunzai-plugin) Óë [Áîºü±ùÁ§/yunzai_Bot²å¼ş¼òµ¥ÖÆ×÷](https://gitee.com/Yae_Miko_Fox/yunzai_bot-plugin) »ñÈ¡Áé¸Ğ£¬Ê¹ÓÃ [Microsoft Visual Studio](https://visualstudio.microsoft.com) with [Github Copilot AI](https://github.com/features/copilot) Óë [¶¹°ü](https://www.doubao.com/chat) Ğ­Öú±àĞ´¡£
-¸ĞĞ» [wyf9/sleepy](https://github.com/wyf9/sleepy) Ìá¹©Ö§³Ö¡£
+## å®‰è£…
+1. ä»ä»“åº“ä¸‹è½½ [`sleepy-for-yunzai.js`](https://github.com/WindDrift/sleepy-for-yunzai/blob/master/sleepy-for-yunzai.js) æ–‡ä»¶ï¼›
+2. å°†ä¸‹è½½çš„æ–‡ä»¶æ”¾å…¥ Yunzai-Bot çš„ `plugins`-`example` æ–‡ä»¶å¤¹ä¸­ï¼›
+3. æ‰“å¼€è¯¥æ–‡ä»¶ï¼›
+4. å°†ç¬¬ 21 è¡Œçš„ `YourServerAdderss` æ›¿æ¢ä¸ºä½ çš„ sleepy æœåŠ¡ç«¯åœ°å€ï¼Œç„¶åä¿å­˜ï¼›
+5. é‡å¯ Yunzai-Bot å³å¯ã€‚
+## ä½¿ç”¨
+åœ¨ç¾¤å†…å‘é€ `äººå‘¢` æŸ¥çœ‹è®¾å¤‡çŠ¶æ€ã€‚
+è‹¥éœ€è¦ä¿®æ”¹å…³é”®è¯ï¼Œè¯·ä¿®æ”¹ `sleepy-for-yunzai.js` æ–‡ä»¶ç¬¬ 11 è¡Œçš„æ­£åˆ™è¡¨è¾¾å¼ï¼Œç„¶åé‡å¯ Yunzai-Botã€‚
+## è¿›é˜¶
+é˜…è¯» [sleepy API æ–‡æ¡£](https://github.com/wyf9/sleepy/blob/main/doc/api.md)ï¼ŒåŠ å…¥æ›´å¤šåŠŸèƒ½ã€‚
+æ¬¢è¿å„ä½å¤§ä½¬æäº¤ [Issue](https://gitee.com/WindDrift/sleepy-for-yunzai/issues) ä¸ [Pull Request](https://gitee.com/WindDrift/sleepy-for-yunzai/pulls) è¡¥å……ä»£ç ã€‚
+# å…¶ä»–åŠé¸£è°¢
+æœ¬æ’ä»¶ä»…ä¾›å­¦ä¹ äº¤æµä½¿ç”¨ï¼Œä¸å¾—ç”¨äºå•†ä¸šç”¨é€”ã€‚
+æœ¬æ’ä»¶ä» [Lain./Miao-Yunzai-plugin](https://gitee.com/shijinn/Miao-Yunzai-plugin) ä¸ [ä»¤ç‹å†°ç’ƒ/yunzai_Botæ’ä»¶ç®€å•åˆ¶ä½œ](https://gitee.com/Yae_Miko_Fox/yunzai_bot-plugin) è·å–çµæ„Ÿï¼Œä½¿ç”¨ [Microsoft Visual Studio](https://visualstudio.microsoft.com) with [Github Copilot AI](https://github.com/features/copilot) ä¸ [è±†åŒ…](https://www.doubao.com/chat) ååŠ©ç¼–å†™ã€‚
+æ„Ÿè°¢ [wyf9/sleepy](https://github.com/wyf9/sleepy) æä¾›æ”¯æŒã€‚
