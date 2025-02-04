@@ -16,7 +16,7 @@ pnpm add axios -w
 4. 将第 21 行的 `YourServerAdderss` 替换为你的 sleepy 服务端地址，然后保存；
 5. 重启 Yunzai-Bot 即可。
 ## 使用
-在群内发送 `人呢` 查看设备状态。
+在群内发送 `人呢`、`在干嘛` 查看设备状态。
 若需要修改关键词，请修改 `sleepy-for-yunzai.js` 文件第 11 行的正则表达式，然后重启 Yunzai-Bot。
 ## 进阶
 阅读 [sleepy API 文档](https://github.com/wyf9/sleepy/blob/main/doc/api.md)，加入更多功能。

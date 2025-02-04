@@ -8,7 +8,7 @@ export class SleepyForYunzai extends plugin {
             priority: 6, // 插件优先度，数字越小优先度越高
             rule: [
                 {
-                    reg: '^人呢$', // 正则表达式，匹配消息“人呢”
+                    reg: '.*(人呢|在干嘛|浮笙在干嘛).*', // 正则表达式，匹配消息包含“人呢”、“在干嘛”、“浮笙在干嘛”，请用“|”分隔匹配内容。
                     fnc: 'handleQuery' // 执行方法
                 }
             ]
