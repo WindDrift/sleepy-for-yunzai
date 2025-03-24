@@ -25,7 +25,7 @@ export class SleepyForYunzai extends plugin {
     // 处理请求数据并回复的方法
     async handleQuery(e) {
         // 添加消息判断
-        if (!validMessages.includes(this.queryMessage)) {
+        if (!this.queryMessage.includes(e.msg)) { // 检查消息是否在 queryMessage 中
             return;
         }
 
