@@ -15,10 +15,22 @@ export class SleepyForYunzai extends plugin {
         });
     }
 
+    // sleepy 服务器配置参数
+    serverAddress = 'http://yourserver.com:9010'; // 替换为你的服务器地址，不要以“/”结尾，端口号根据实际情况修改
+    apiKey = 'your-api-key'; // 替换为你的API密钥
+
+    // 判断消息类型
+    queryMessage = ['人呢', '在干嘛', '浮笙在干嘛']; // 从 /query API 获取所有设备状态的消息关键词
+    
     // 处理请求数据并回复的方法
     async handleQuery(e) {
+        // 添加消息判断
+        if (!validMessages.includes(this.queryMessage)) {
+            return;
+        }
+
         try {
-            const response = await axios.get('YourServerAdderss/query'); // 请替换为你的服务器地址，注意添加端口号
+            const response = await axios.get(`${this.serverAddress}/query`); // 使用 GET 方法从 /query API 获取数据
             const data = response.data;
             const deviceData = data.device;
             let replyMessage = '';
