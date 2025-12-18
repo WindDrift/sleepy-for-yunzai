@@ -20,7 +20,7 @@ export class SleepyForYunzai extends plugin {
     apiKey = 'your-api-key'; // 替换为你的API密钥
 
     // 判断消息类型
-    queryMessage = ['人呢', '在干嘛', '浮笙在干嘛']; // 从 /query API 获取所有设备状态的消息关键词
+    queryMessage = ['人呢', '在干嘛', '浮笙在干嘛']; // 消息关键词
     
     // 处理请求数据并回复的方法
     async handleQuery(e) {
@@ -38,12 +38,52 @@ export class SleepyForYunzai extends plugin {
             for (const deviceId in deviceData) {
                 if (deviceData.hasOwnProperty(deviceId)) {
                     const device = deviceData[deviceId];
-                    replyMessage += `${device.show_name}:\n${device.using ? device.app_name : '未在使用'}\n\n`;
+                    // 设备名称使用中文冒号
+                    replyMessage += `${device.show_name}：\n`;
+                    
+                    if (device.using) {
+                        // 获取原始数据字符串用于正则匹配
+                        const rawData = device.raw_string || device.app_name;
+                        
+                        // 提取音乐信息 - 匹配 [♪歌曲名]
+                        const musicMatch = rawData.match(/\[♪([^\]]+)\]/);
+                        
+                        // 提取电量信息
+                        let batteryInfo = '';
+                        const batteryCharging = rawData.match(/\[(\d{1,3})%\s?\+\]|\[🔋(\d{1,3})%⚡\]/);
+                        const batteryFull = rawData.match(/\[(\d{1,3})%\]/);
+                        
+                        if (batteryCharging) {
+                            const percentage = batteryCharging[1] || batteryCharging[2];
+                            batteryInfo = `电量：${percentage}%，正在充电\n`;
+                        } else if (batteryFull) {
+                            const percentage = batteryFull[1];
+                            batteryInfo = `电量：${percentage}%\n`;
+                        }
+                        
+                        // 获取完整的应用信息（去掉标记符号）
+                        const appInfo = rawData.replace(/\[♪[^\]]+\]\s*/, '').replace(/\[\d{1,3}%\s?[+⚡]*\]\s*/, '').replace(/\[🔋[^\]]+\]\s*/, '').trim();
+                        replyMessage += `${appInfo}\n`;
+                        
+                        // 添加音乐信息
+                        if (musicMatch) {
+                            replyMessage += `正在播放：《${musicMatch[1]}》\n`;
+                        }
+                        
+                        // 添加电量信息
+                        if (batteryInfo) {
+                            replyMessage += batteryInfo;
+                        }
+                    } else {
+                        replyMessage += '未在使用\n';
+                    }
+                    
+                    replyMessage += '\n';
                 }
             }
 
             // 添加最后更新时间
-            replyMessage += `最后更新时间:\n${data.last_updated}`;
+            replyMessage += `最后更新时间：\n${data.last_updated}`;
 
             // 回复格式化后的文本数据
             e.reply(replyMessage.trim());
